@@ -1,0 +1,172 @@
+@keyframes rainbow-ish {
+  0% {
+    color: red;
+  }
+
+  10% {
+    color: orange;
+  }
+
+  20% {
+    color: yellow;
+  }
+
+  30% {
+    color: green;
+  }
+
+  40% {
+    color: blue;
+  }
+
+  50% {
+    color: indigo;
+  }
+
+  60% {
+    color: violet;
+  }
+
+  70% {
+    color: pink;
+  }
+
+  80% {
+    color: aquamarine;
+  }
+
+  90% {
+    color: antiquewhite;
+  }
+
+  100% {
+    color: crimson;
+  }
+}
+
+@keyframes glare {
+  from {
+    border-color: red;
+  }
+
+  to {
+    border-color: initial;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes exit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  min-width: 300px;
+  padding: 4rem 0rem 0rem;
+}
+
+.loading {
+  margin: 0 0 1rem;
+  opacity: 0;
+}
+
+.loading-visible {
+  animation-name: appear;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.loading-hidden {
+  animation-name: exit;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.success {
+  animation-name: rainbow-ish;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.row {
+  animation-name: appear;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.cell {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid gray;
+  color: #333333;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  width: 25px;
+}
+
+.cell-guessed {
+  color: white;
+}
+
+.cell-invalid-word {
+  animation-name: glare;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.cell-valid-word {
+  color: #ffffff;
+}
+
+.cell-invalid {
+  background-color: gray;
+}
+
+.cell-valid-guess {
+  background-color: peru;
+}
+
+.cell-valid-position {
+  background-color: green;
+}

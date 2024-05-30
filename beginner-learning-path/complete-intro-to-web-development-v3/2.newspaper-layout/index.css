@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 800px;
+}
+
+.title {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.articles {
+  display: grid;
+  grid-template-areas:
+    "first second second third"
+    "fourth fifth fifth fifth";
+}
+
+article {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.25rem;
+}
+
+.first {
+  grid-area: first;
+}
+
+.second {
+  grid-area: second;
+}
+
+.third {
+  grid-area: third;
+}
+
+.fourth {
+  grid-area: fourth;
+}
+
+.fifth {
+  grid-area: fifth;
+}
+
+img {
+  max-width: 100px;
+}

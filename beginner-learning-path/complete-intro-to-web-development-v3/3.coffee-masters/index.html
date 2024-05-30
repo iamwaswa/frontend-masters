@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1 class="title">☕️ Coffee Masters</h1>
+      </header>
+      <section class="order">
+        <article class="card">
+          <header>
+            <h2 class="card-title">ITEMS</h2>
+          </header>
+          <section class="item">
+            <p class="item-count">1x</p>
+            <p class="item-title">Capuccino</p>
+            <p class="item-price">$3.35</p>
+            <section class="item-details">
+              <p class="item-detail">Lite foam</p>
+            </section>
+          </section>
+          <section class="item">
+            <p class="item-count">1x</p>
+            <p class="item-title">Capuccino</p>
+            <p class="item-price">$3.85</p>
+            <section class="item-details">
+              <p class="item-detail">Lite milk</p>
+              <p class="item-detail">Double espresso</p>
+            </section>
+          </section>
+          <section class="item">
+            <p class="item-count">1x</p>
+            <p class="item-title">Croissant</p>
+            <p class="item-price">$2.45</p>
+            <section class="item-details">
+              <p class="item-detail">Butter</p>
+            </section>
+          </section>
+        </article>
+        <section class="info">
+          <article class="card">
+            <header>
+              <h2 class="card-title">NAME</h2>
+            </header>
+            <section class="fields">
+              <label class="field">
+                <span class="field-label">Name for order</span>
+                <input class="field-input field-input-full" />
+              </label>
+            </section>
+          </article>
+          <article class="card">
+            <header>
+              <h2 class="card-title">PAYMENT</h2>
+            </header>
+            <section class="fields">
+              <label class="field">
+                <span class="field-label">Card number</span>
+                <input class="field-input field-input-full" />
+              </label>
+              <label class="field">
+                <span class="field-label">CCV Number</span>
+                <input class="field-input field-input-full" />
+              </label>
+            </section>
+          </article>
+        </section>
+      </section>
+      <section class="cost">
+        <section class="cost-items">
+          <section class="cost-item">
+            <span class="cost-item-title">Subtotal:</span>
+            <span class="cost-item-value">$9.65</span>
+          </section>
+          <section class="cost-item">
+            <span class="cost-item-title">Tax:</span>
+            <span class="cost-item-value">$0.82</span>
+          </section>
+        </section>
+        <section class="cost-item total">
+          <span class="cost-item-title">Total:</span>
+          <span class="cost-item-value">$10.47</span>
+        </section>
+      </section>
+      <button class="submit">Place order</button>
+    </main>
+  </body>
+</html>

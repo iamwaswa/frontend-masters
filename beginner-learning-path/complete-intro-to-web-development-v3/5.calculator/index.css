@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  min-width: 320px;
+  max-height: 100dvh;
+  justify-content: center;
+}
+
+.calculator {
+  display: grid;
+  flex-grow: 1;
+  grid-template-areas:
+    "output   output   output    output"
+    "clear    clear    backspace divide"
+    "seven    eight    nine      multiply"
+    "four     five     six       subtract"
+    "one      two      three     add"
+    "zero     zero     zero      equals";
+  grid-template-rows: 1.25fr repeat(5, 1fr);
+  max-height: 400px;
+  max-width: 240px;
+  width: 100%;
+}
+
+.output {
+  align-items: center;
+  background-color: #333;
+  border: 0;
+  color: #ffffff;
+  box-shadow: 0 0 0 1px #333;
+  display: flex;
+  font-size: 2rem;
+  grid-area: output;
+  justify-content: flex-end;
+  max-width: 240px;
+  padding: 1rem;
+}
+
+.action {
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 0 1px #333;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.action:focus,
+.action:hover {
+  opacity: 0.9;
+}
+
+.equals,
+.operator {
+  background-color: darkorange;
+  color: aliceblue;
+}
+
+.equals:active,
+.operator:active {
+  background-color: rgb(237, 131, 0);
+  opacity: 1;
+}
+
+.digit:active,
+.non-operator:active {
+  background-color: #e0e0e0;
+  opacity: 1;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.backspace {
+  grid-area: backspace;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.add {
+  grid-area: add;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.equals {
+  grid-area: equals;
+}
