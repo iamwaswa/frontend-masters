@@ -194,31 +194,51 @@ main hr {
 }
 
 .project {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .project {
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%;
+    max-height: 450px;
+  }
 }
 
 .project-image-container {
-  aspect-ratio: 2 / 1;
   background-color: inherit;
   border-radius: 1rem;
   box-shadow: 0 -2px 0 0 var(--foreground-color-2),
     -2px 0 0 0 var(--foreground-color-2);
-  grid-row: 2 / -1;
+  order: 2;
   padding: 0.75rem;
 }
 
-.project-image-container-left {
-  grid-column: 1 / 6;
+@media screen and (min-width: 1000px) {
+  .project-image-container {
+    grid-row: 2 / -1;
+    order: unset;
+  }
 }
 
-.project-image-container-right {
-  grid-column: 7 / -1;
+@media screen and (min-width: 1000px) {
+  .project-image-container-left {
+    grid-column: 1 / 7;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project-image-container-right {
+    grid-column: 7 / -1;
+  }
 }
 
 .project-image {
-  background-color: pink;
   border-radius: 0.5rem;
   display: block;
   height: 100%;
@@ -229,16 +249,25 @@ main hr {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  grid-row: 1 / -1;
 }
 
-.project-text-left {
-  grid-column: 1 / 8;
+@media screen and (min-width: 1000px) {
+  .project-text {
+    grid-row: 1 / 10;
+  }
 }
 
-.project-text-right {
-  grid-column: 5 / -1;
-  text-align: right;
+@media screen and (min-width: 1000px) {
+  .project-text-left {
+    grid-column: 1 / 8;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project-text-right {
+    grid-column: 5 / -1;
+    text-align: right;
+  }
 }
 
 .project-text h4 {
@@ -246,25 +275,39 @@ main hr {
 }
 
 .project-text-left .project-text-description {
-  padding: 0.75rem 2rem 0.75rem 0.75rem;
+  padding: 0.75rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .project-text-left .project-text-description {
+    padding: 0.75rem 2rem 0.75rem 0.75rem;
+  }
 }
 
 .project-text-right .project-text-description {
-  padding: 0.75rem 0.75rem 0.75rem 2rem;
+  padding: 0.75rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .project-text-right .project-text-description {
+    padding: 0.75rem 0.75rem 0.75rem 2rem;
+  }
 }
 
 .project-text-description {
   background-color: var(--background-color-1);
   border-radius: 0.5rem;
-  font-size: 0.75em;
+  font-size: 0.6em;
 }
 
 .project-text-description a {
   font-size: 1em;
 }
 
-.project-text-right .project-text-technologies {
-  text-align: right;
+@media screen and (min-width: 1000px) {
+  .project-text-right .project-text-description {
+    text-align: right;
+  }
 }
 
 .project-text-technologies {
