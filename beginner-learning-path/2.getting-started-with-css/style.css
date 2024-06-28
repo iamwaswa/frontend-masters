@@ -183,6 +183,96 @@ main hr {
   background-color: var(--background-color-2);
 }
 
+#projects h2 {
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.project-image-container {
+  aspect-ratio: 2 / 1;
+  background-color: inherit;
+  border-radius: 1rem;
+  box-shadow: 0 -2px 0 0 var(--foreground-color-2),
+    -2px 0 0 0 var(--foreground-color-2);
+  grid-row: 2 / -1;
+  padding: 0.75rem;
+}
+
+.project-image-container-left {
+  grid-column: 1 / 6;
+}
+
+.project-image-container-right {
+  grid-column: 7 / -1;
+}
+
+.project-image {
+  background-color: pink;
+  border-radius: 0.5rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-row: 1 / -1;
+}
+
+.project-text-left {
+  grid-column: 1 / 8;
+}
+
+.project-text-right {
+  grid-column: 5 / -1;
+  text-align: right;
+}
+
+.project-text h4 {
+  color: var(--foreground-color-2);
+}
+
+.project-text-left .project-text-description {
+  padding: 0.75rem 2rem 0.75rem 0.75rem;
+}
+
+.project-text-right .project-text-description {
+  padding: 0.75rem 0.75rem 0.75rem 2rem;
+}
+
+.project-text-description {
+  background-color: var(--background-color-1);
+  border-radius: 0.5rem;
+  font-size: 0.75em;
+}
+
+.project-text-description a {
+  font-size: 1em;
+}
+
+.project-text-right .project-text-technologies {
+  text-align: right;
+}
+
+.project-text-technologies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 #contact {
   align-items: center;
   background-color: var(--background-color-3);
