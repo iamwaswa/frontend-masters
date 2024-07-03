@@ -1,0 +1,77 @@
+@import "base.css";
+
+:root {
+  /*
+   * Typescale (Desktop)
+   */
+  --speaker-company-desktop: 1.5rem;
+  --speaker-description-desktop: 1.5rem;
+  --speaker-name-desktop: 2rem;
+
+  /*
+   * Typescale (Mobile)
+   */
+  --speaker-company-mobile: 1.25rem;
+  --speaker-description-mobile: 1rem;
+  --speaker-name-mobile: 1.5rem;
+
+  --speaker-company: var(--speaker-company-mobile);
+  --speaker-description: var(--speaker-description-mobile);
+  --speaker-name: var(--speaker-name-mobile);
+  --speakers-gap: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --speaker-company: var(--speaker-company-desktop);
+    --speaker-description: var(--speaker-description-desktop);
+    --speaker-name: var(--speaker-name-desktop);
+  }
+}
+
+main {
+  background-color: var(--secondary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: var(--sub-heading);
+}
+
+.speakers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--speakers-gap);
+}
+
+.speaker {
+  display: flex;
+  flex-basis: calc(50% - (var(--speakers-gap) * 2));
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.speaker * {
+  margin: 0;
+}
+
+.speaker img {
+  aspect-ratio: 1 / 1;
+  background-color: gray;
+  width: 310px;
+}
+
+.speaker h3 {
+  font-size: var(--speaker-name);
+}
+
+.speaker h4 {
+  font-size: var(--speaker-company);
+}
+
+.speaker p {
+  font-size: var(--speaker-description);
+}
