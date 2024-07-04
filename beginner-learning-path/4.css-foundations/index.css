@@ -1,11 +1,11 @@
 @import "base.css";
 
-main {
-  background-color: var(--primary-color);
+:root {
+  --navigation-item-color: var(--secondary-color);
 }
 
-nav a {
-  color: var(--secondary-color);
+main {
+  background-color: var(--primary-color);
 }
 
 .text-container {
@@ -27,13 +27,20 @@ nav a {
 
 .cta-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .cta {
   border: 1px solid var(--secondary-color);
   font-size: var(--button);
-  padding: 1.90625rem 4rem;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 920px) {
+  .cta {
+    padding: 1.90625rem 4rem;
+  }
 }
 
 .cta-primary {

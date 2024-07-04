@@ -69,22 +69,44 @@ main {
   gap: 6.25rem;
 }
 
-nav {
+.mobile-nav {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 3.75rem;
 }
 
-nav ul {
+.desktop-nav {
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+  padding: 3.75rem;
+}
+
+@media screen and (min-width: 600px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+.desktop-nav ul {
   align-items: center;
   display: flex;
   justify-content: space-between;
   gap: 2.25rem;
 }
 
-nav li:last-child {
+.desktop-nav li:last-child {
   font-size: var(--logo);
+}
+
+.mobile-nav a,
+.desktop-nav a {
+  color: var(--navigation-item-color);
 }
 
 .content-container {

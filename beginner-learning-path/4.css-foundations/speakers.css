@@ -2,6 +2,11 @@
 
 :root {
   /*
+   * Colors
+   */
+  --navigation-item-color: var(--primary-color);
+
+  /*
    * Typescale (Desktop)
    */
   --speaker-company-desktop: 1.5rem;
@@ -33,11 +38,8 @@ main {
   background-color: var(--secondary-color);
 }
 
-nav a {
-  color: var(--primary-color);
-}
-
 h2 {
+  color: var(--primary-color);
   font-size: var(--sub-heading);
 }
 
@@ -45,6 +47,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--speakers-gap);
+  max-width: 1020px;
 }
 
 .speaker {
@@ -65,6 +68,7 @@ h2 {
 }
 
 .speaker h3 {
+  color: var(--primary-color);
   font-size: var(--speaker-name);
 }
 
