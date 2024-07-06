@@ -109,6 +109,40 @@ main {
   color: var(--navigation-item-color);
 }
 
+.mobile-nav-cta {
+  background-color: transparent;
+  border: 0px;
+}
+
+.mobile-nav-cta::after {
+  content: "ⅹ";
+}
+
+.mobile-nav-cta.menu-closed::after {
+  content: "🍔";
+}
+
+.mobile-nav-links {
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  justify-content: space-around;
+  position: absolute;
+  transition: left 0.2s ease-in-out;
+}
+
+.mobile-nav-links.menu-closed {
+  left: -100%;
+}
+
+.mobile-nav-links a {
+  color: var(--primary-color);
+  font-size: var(--heading);
+}
+
 .content-container {
   padding: 0 9.375rem 4rem;
 }
