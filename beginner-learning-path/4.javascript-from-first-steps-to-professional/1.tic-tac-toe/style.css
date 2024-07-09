@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100dvh;
+  width: 100dvw;
+  margin-top: clamp(5vw, 25vw, 10rem);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 3rem);
+  grid-template-rows: repeat(3, 3rem);
+  margin-top: 1.5rem;
+}
+
+.board button {
+  background-color: transparent;
+  border: 2px solid green;
+  border-left-width: 0px;
+  cursor: pointer;
+}
+
+.board button:nth-child(3n) {
+  border-right-width: 0px;
+}
+
+.board button:nth-child(n - 7) {
+  border-top-width: 0px;
+}
+
+.board button:nth-child(n + 7) {
+  border-bottom-width: 0px;
+}
