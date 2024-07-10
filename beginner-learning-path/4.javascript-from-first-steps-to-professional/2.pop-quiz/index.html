@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pop Quiz</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Quiz.js</h1>
+        <h2>Do you know JS? Find out!</h2>
+      </header>
+      <p id="score">Score: <span id="score-and-total">0 / 0</span></p>
+      <p id="question"></p>
+      <footer>
+        <section class="choices">
+          <button class="choice" data-choice="true">true</button>
+          <button class="choice" data-choice="false">false</button>
+        </section>
+        <p id="explanation"></p>
+        <button disabled id="next-question">Next Question</button>
+      </footer>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
